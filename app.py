@@ -7,7 +7,8 @@ import util as u
 # --- Config ---
 # GGUF_PATH = "./models/Mistral-7B-Instruct-v0.1.Q5_K_M.gguf"
 # GGUF_PATH = "./models/Mistral-7B-Instruct-v0.3.Q5_K_M.gguf"
-GGUF_PATH = "./models/openhermes-2.5-mistral-7b.Q4_K_M.gguf"
+# GGUF_PATH = "./models/openhermes-2.5-mistral-7b.Q4_K_M.gguf"
+GGUF_PATH = "./models/Llama-3.2-1B-Instruct-Q6_K_L.gguf"
 EMBED_MODEL = "./models/intfloat--multilingual-e5-small"
 CONTEXT_LIMIT = 3
 
@@ -35,7 +36,7 @@ u.log_info("Carregando modelo LLaMa...")
 llm = Llama(
   model_path=GGUF_PATH,
   n_ctx=2048,
-  n_threads=8,
+  n_threads=2,
   verbose=False
 )
 
